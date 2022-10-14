@@ -10,11 +10,11 @@ const ChatListItem= () => {
 
       <View style={styles.content}>
         <View style={styles.row}>
-            <Text style={styles.name}>Lukas</Text>
+            <Text numberOfLines={1} style={styles.name}>Lukas</Text>
             <Text style={styles.subTitle}>8:30</Text>
         </View>
 
-        <Text style={styles.subTitle}>Hello there</Text>
+        <Text numberOfLines={2} style={styles.subTitle}>Hello there</Text>
       </View>
 
     </View>
@@ -24,31 +24,38 @@ const ChatListItem= () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        width: "100%"
+        width: "100%",
+        paddingLeft: 10,
+        paddingRight: 10,
+        marginVertical: 5,
+        height: 70
     },
 
     Image: {
         width: 60,
         height: 60,
         borderRadius: 30,
-
+        marginRight: 10
     },
 
     content: {
-        width: "100%",
-        backgroundColor: "red",
+        flex: 1,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderBottomColor: "#cccdc6"
     },
 
     row: {
-
+        flexDirection: "row",
+        marginBottom: 5
     },
 
     name: {
-
+        flex: 1,
+        fontWeight: "bold"
     },
 
     subTitle: {
-
+        color: "gray"
     }
 })
 

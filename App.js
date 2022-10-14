@@ -6,6 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ChatListItem />
+      <ChatListItem />
       <StatusBar style="auto" />
     </View>
   );
