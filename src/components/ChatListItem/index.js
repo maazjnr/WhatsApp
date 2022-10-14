@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     marginVertical: 5,
     height: 70,
+    flex: 1
   },
 
   Image: {
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    flex: 1,
+    width: "80%",
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: "#cccdc6",
   },

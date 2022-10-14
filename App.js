@@ -1,25 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import ChatListItem from './src/components/ChatListItem';
-
-const chat = {
-  "id": "1",
-  "user": {
-    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
-    "name": "Lukas Johan"
-  },
-
-  "lastMessage": {
-      "text": "okay, i'll see tomorrow",
-      "createdAt": "07:38"
-    }
-}
+import ChatScreen from './src/screens/ChatScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatListItem chat={chat} />
       <StatusBar style="auto" />
+      <ChatScreen />
     </View>
   );
 }
@@ -30,5 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: 40
   },
 });
