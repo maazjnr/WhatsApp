@@ -12,7 +12,8 @@ import messages from "../../assets/data/messages.json";
 const ChatScreen = () => {
   return (
     <ImageBackground source={bg} style={styles.bg}>
-      <FlatList
+      <FlatList showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
         style={styles.list}
         data={messages}
         renderItem={({ item }) => <Message message={item} />}
@@ -25,6 +26,7 @@ const ChatScreen = () => {
 const styles = StyleSheet.create({
   bg: {
     flex: 1,
+    width: "100%"
   },
 
   list: {
