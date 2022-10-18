@@ -3,13 +3,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import ChatListItem from './src/components/ChatListItem';
 import ChatsScreen from './src/screens/ChatsScreen';
 import ChatScreen from './src/screens/ChatScreen';
-
+import Navigator from './src/navigation';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatScreen />
-      <StatusBar style="auto" />
+      <Navigator />
     </View>
   );
 }
