@@ -8,7 +8,8 @@ import Navigator from './src/navigation';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Navigator />
+      <ChatScreen />
+      <StatusBar style='auto' />
     </View>
   );
 }

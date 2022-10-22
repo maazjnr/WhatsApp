@@ -25,7 +25,6 @@ const ChatScreen = () => {
         renderItem={({ item }) => <Message message={item} />}
         inverted
       />
-
       <InputBox />
     </ImageBackground>
     </KeyboardAvoidingView>
