@@ -9,15 +9,20 @@ const Message = ({ message }) => {
   };
 
   return (
-    <View style={[styles.container, {
-      backgroundColor: isMyMessage() ? "#DCF8C5" : "white" ,
-      alignSelf: isMyMessage() ? "flex-end" : "flex-start"
-    }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor: isMyMessage() ? "#DCF8C5" : "white",
+          alignSelf: isMyMessage() ? "flex-end" : "flex-start",
+        },
+      ]}
+    >
       <Text>{message.text}</Text>
       <Text style={styles.time}>{dayjs(message.createdAt).fromNow(true)}</Text>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -34,4 +39,3 @@ const styles = StyleSheet.create({
 });
 
 export default Message;
-
