@@ -8,7 +8,6 @@ const InputBox = () => {
 
   const onSend = () => {
     console.warn('Sending a new message: ', newMessage);
-
     setNewMessage('');
   };
 

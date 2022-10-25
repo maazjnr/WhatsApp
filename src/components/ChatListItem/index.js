@@ -4,7 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 
-
 const ChatListItem = ({ chat }) => {
   const navigation = useNavigation();
 
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     marginVertical: 5,
     height: 70,
-    flex: 1
+    
   },
 
   Image: {
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    width: "80%",
+    flex: 1,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: "#cccdc6",
   },
