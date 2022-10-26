@@ -11,8 +11,18 @@ import bg from "../../assets/images/BG.png";
 import Message from "../components/Message";
 import messages from "../../assets/data/messages.json";
 import InputBox from "../components/InputBos/Index";
+import { useRoute, useNavigation } from "@react-navigation/native";
+import { useEffect } from "react";
 
 const ChatScreen = () => {
+
+  const route = useRoute();
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({title: route.params.name})
+  }, [route.params.name])
+  
   return (
     <KeyboardAvoidingView
       style={{ flex: 1, width: "100%" }}
