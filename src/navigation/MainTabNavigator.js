@@ -45,7 +45,7 @@ const MainTabNavigator = () => {
       <Tab.Screen
         name="Chats"
         component={ChatsScreen}
-        options={{
+        options={({navigation}) => ({
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="ios-chatbubbles-sharp" size={24} color={color} />
           ),
@@ -55,9 +55,10 @@ const MainTabNavigator = () => {
               size={18}
               color={"royalblue"}
               style={{ marginRight: 15 }}
+              onPress={() => navigation.navigate("Contacts")}
             />
           ),
-        }}
+        })}
       />
       <Tab.Screen
         name="Setting"
